@@ -6,10 +6,16 @@
   "license": "MIT",
   "scripts": {
     "sass:start": "sass src/styles/main.scss src/styles/main.css --watch",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "build": "gulp pages styles"
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
     "sass": "^1.30.0"
   }
 }
