@@ -1,0 +1,41 @@
+.latest-articles {
+  padding: var(--gap-lg) 0;
+}
+
+.latest-articles-headline {
+  margin-bottom: var(--gap-lg);
+}
+
+.latest-articles-card {
+  > img {
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -ms-border-radius: 5px 5px 0 0;
+    -o-border-radius: 5px 5px 0 0;
+
+    width: 100%;
+    height: auto;
+  }
+
+  > span,
+  > h3,
+  > p {
+    padding: 0 var(--gap-sm);
+  }
+
+  > span {
+    display: inline-block;
+    margin-top: var(--gap-md);
+  }
+
+  > h3,
+  > p {
+    margin-top: var(--gap-xs);
+  }
+
+  > span,
+  > p {
+    color: $grayish-blue;
+  }
+}

@@ -1,8 +1,17 @@
 @import "./settings/colors";
 @import "./settings/fonts";
+
+@import "./tools/gaps";
+
 @import "./generic/reset";
+
 @import "./base/elements";
 
 @import "./objects/brand";
 
 @import "./components/header";
+@import "./components/primary-button";
+@import "./components/hero";
+@import "./components/benefits";
+@import "./components/latest-articles";
+@import "./components/footer";

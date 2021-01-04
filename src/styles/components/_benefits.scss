@@ -1,0 +1,30 @@
+.benefits {
+  padding: var(--gap-lg) 0;
+}
+
+.benefits-headline {
+  h2 {
+    margin-bottom: var(--gap-sm);
+  }
+
+  p {
+    margin-bottom: var(--gap-lg);
+    color: $grayish-blue;
+  }
+}
+
+.benefits-item {
+  > img {
+    width: 72px;
+    height: 72px;
+  }
+
+  > img,
+  > h3 {
+    margin-bottom: var(--gap-sm);
+  }
+
+  > p {
+    color: $grayish-blue;
+  }
+}

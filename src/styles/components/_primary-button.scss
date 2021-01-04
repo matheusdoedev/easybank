@@ -1,0 +1,12 @@
+.primary-btn {
+  background: $gradient-green-blue;
+  padding: var(--gap-xs) var(--gap-md);
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+
+  color: $very-light-gray;
+  font-weight: 700;
+}

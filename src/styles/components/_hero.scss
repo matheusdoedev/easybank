@@ -1,0 +1,28 @@
+.hero {
+  padding: var(--gap-xl) 0 var(--gap-lg) 0;
+
+  position: relative;
+  z-index: -1;
+
+  min-height: 100vh;
+
+  h1,
+  p {
+    margin-bottom: var(--gap-sm);
+  }
+
+  p {
+    color: $grayish-blue;
+  }
+}
+
+.hero-imgs {
+  background: url("../../assets/images/bg-intro-desktop.svg");
+  position: relative;
+
+  > img {
+    position: absolute;
+    top: -365px;
+    left: 32%;
+  }
+}

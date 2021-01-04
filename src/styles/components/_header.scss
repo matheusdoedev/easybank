@@ -1,0 +1,20 @@
+.header {
+  position: relative;
+  z-index: 10;
+
+  background: white;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+
+  > ul {
+    display: flex;
+    justify-content: center;
+
+    > li a {
+      color: $grayish-blue;
+    }
+  }
+}
