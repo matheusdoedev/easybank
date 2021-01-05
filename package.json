@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "sass:start": "sass src/styles/main.scss src/styles/main.css --watch",
+    "start": "serve src/views && yarn sass:start",
     "deploy": "gh-pages -d dist",
     "build": "gulp pages styles"
   },
@@ -17,5 +18,8 @@
     "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^5.0.1",
     "sass": "^1.30.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3"
   }
 }
