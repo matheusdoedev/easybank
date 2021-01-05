@@ -3,7 +3,7 @@
 }
 
 .latest-articles-headline {
-  margin-bottom: var(--gap-lg);
+  margin-bottom: var(--gap-md);
 }
 
 .latest-articles-card {
@@ -15,21 +15,22 @@
     -o-border-radius: 5px 5px 0 0;
 
     width: 100%;
-    height: auto;
+    height: min-content;
+    image-resolution: initial;
   }
 
   > span,
-  > h3,
+  > h4,
   > p {
     padding: 0 var(--gap-sm);
   }
 
   > span {
     display: inline-block;
-    margin-top: var(--gap-md);
+    margin-top: var(--gap-sm);
   }
 
-  > h3,
+  > h4,
   > p {
     margin-top: var(--gap-xs);
   }
@@ -37,5 +38,9 @@
   > span,
   > p {
     color: $grayish-blue;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: var(--gap-md);
   }
 }

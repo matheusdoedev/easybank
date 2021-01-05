@@ -27,4 +27,8 @@
   > p {
     color: $grayish-blue;
   }
+
+  @media (max-width: 768px) {
+    margin-bottom: var(--gap-md);
+  }
 }
