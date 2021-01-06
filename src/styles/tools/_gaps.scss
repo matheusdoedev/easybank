@@ -6,7 +6,7 @@
   --gap-lg: 4rem;
   --gap-xl: 8rem;
 
-  @media (min-width: 1400px) {
+  @include media-breakpoint-only(xl) {
     --gap: 1rem;
     --gap-xs: 1rem;
     --gap-sm: 2rem;
@@ -15,7 +15,7 @@
     --gap-xl: 16rem;
   }
 
-  @media (max-width: 768px) {
+  @include media-breakpoint-down(sm) {
     --gap: 0.5rem;
     --gap-xs: 0.5rem;
     --gap-sm: 1rem;
