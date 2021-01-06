@@ -1,0 +1,7 @@
+.container-fluid {
+  width: 90%;
+
+  @include media-breakpoint-down(md) {
+    width: 95%;
+  }
+}
