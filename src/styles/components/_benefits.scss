@@ -11,6 +11,10 @@
     margin-bottom: var(--gap-lg);
     color: $grayish-blue;
   }
+
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
 }
 
 .benefits-item {
@@ -28,7 +32,13 @@
     color: $grayish-blue;
   }
 
-  @media (max-width: 768px) {
+  @include media-breakpoint-down(sm) {
     margin-bottom: var(--gap-md);
+
+    text-align: center;
+
+    > img {
+      margin: 0 auto var(--gap-sm) auto;
+    }
   }
 }

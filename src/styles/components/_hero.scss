@@ -1,10 +1,27 @@
 .hero {
-  padding: var(--gap-xl) 0 var(--gap-lg) 0;
-
   position: relative;
-  z-index: -1;
+  max-width: 100vw;
+  height: 698.2px;
+  overflow: clip visible;
 
-  min-height: 100vh;
+  background: $light-grayish-blue;
+
+  @include media-breakpoint-only(md) {
+    height: 488.2px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 628.2px;
 
   h1,
   p {
@@ -14,15 +31,64 @@
   p {
     color: $grayish-blue;
   }
+
+  @include media-breakpoint-only(md) {
+    height: 448.2px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0 0 var(--gap-xl) 0;
+    height: auto;
+
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .hero-imgs {
-  background: url("../../assets/images/bg-intro-desktop.svg");
-  position: relative;
+  background: no-repeat url("../assets/images/bg-intro-desktop.svg") bottom left;
+  height: 778.2px;
+
+  position: absolute;
+  right: 0;
+  z-index: 2;
 
   > img {
     position: absolute;
-    top: -365px;
-    left: 32%;
+    right: -14.55vw;
+    z-index: 3;
+
+    @include media-breakpoint-down(sm) {
+      top: -17.5vh;
+      right: 0;
+      left: 5%;
+      width: 90%;
+    }
+
+    @include media-breakpoint-only(md) {
+      top: -5vh;
+    }
+
+    @include media-breakpoint-only(xl) {
+      top: -16vh;
+    }
+
+    @media (min-width: 1550px) {
+      top: -14vh;
+      right: -11vw;
+      width: 80%;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    position: relative;
+    background: no-repeat url("../assets/images/bg-intro-mobile.svg") bottom
+      left;
+    background-size: cover;
+    height: 310px;
+  }
+
+  @include media-breakpoint-only(md) {
+    height: 748.2px;
   }
 }

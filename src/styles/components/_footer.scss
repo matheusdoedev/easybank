@@ -2,9 +2,14 @@
   background: $dark-blue;
   padding: var(--gap-md) 0;
 
-  @media (max-width: 768px) {
+  @include media-breakpoint-down(sm) {
     text-align: center;
     padding: var(--gap-lg) 0;
+
+    .brand {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 
@@ -15,7 +20,10 @@
     display: flex;
   }
 
-  @media (max-width: 768px) {
+  @include media-breakpoint-down(sm) {
+    display: flex;
+    justify-content: center;
+
     margin-bottom: var(--gap-md);
   }
 }
@@ -61,7 +69,7 @@
     color: $grayish-blue;
   }
 
-  @media (max-width: 768px) {
+  @include media-breakpoint-down(sm) {
     margin-top: var(--gap-md);
 
     > a,

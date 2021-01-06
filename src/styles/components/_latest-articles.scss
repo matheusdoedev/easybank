@@ -4,6 +4,10 @@
 
 .latest-articles-headline {
   margin-bottom: var(--gap-md);
+
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
 }
 
 .latest-articles-card {
@@ -40,7 +44,11 @@
     color: $grayish-blue;
   }
 
-  @media (max-width: 768px) {
+  @include media-breakpoint-down(md) {
     margin-bottom: var(--gap-md);
+  }
+
+  @include media-breakpoint-down(sm) {
+    text-align: center;
   }
 }
