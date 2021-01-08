@@ -5,8 +5,8 @@
   "author": "Matheusdoe-dev <matheusdoe.dev@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "sass:dev": "sass src/styles/main.scss src/styles/main.css --watch",
-    "sass:build": "sass src/styles/main.scss src/styles/main.css",
+    "sass:dev": "sass src/styles/index.scss src/styles/index.css --watch",
+    "sass:build": "sass src/styles/index.scss src/styles/index.css",
     "start": "serve src/views && yarn sass:start",
     "prebuild": "rm -rf dist",
     "build": "webpack && mkdir dist/assets && cp -rf src/assets dist && yarn sass:build && gulp pages styles",

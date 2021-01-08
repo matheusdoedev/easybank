@@ -6,7 +6,7 @@ var htmlmin = require("gulp-htmlmin");
 
 gulp.task("styles", () => {
   return gulp
-    .src("src/styles/main.css")
+    .src("src/styles/index.css")
     .pipe(autoprefixer())
     .pipe(cleanCSS())
     .pipe(gulp.dest("dist/styles"));
@@ -14,12 +14,12 @@ gulp.task("styles", () => {
 
 gulp.task("pages", () => {
   return gulp
-    .src("src/views/index.html")
+    .src("src/index.html")
     .pipe(
       htmlmin({
         collapseWhitespace: true,
         removeComments: true,
       })
     )
-    .pipe(gulp.dest("dist/views"));
+    .pipe(gulp.dest("dist"));
 });
