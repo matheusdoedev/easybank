@@ -21,5 +21,5 @@ gulp.task("pages", () => {
         removeComments: true,
       })
     )
-    .pipe(gulp.dest("dist"));
+    .pipe(gulp.dest("dist/views"));
 });
