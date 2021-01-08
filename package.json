@@ -5,10 +5,12 @@
   "author": "Matheusdoe-dev <matheusdoe.dev@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "sass:start": "sass src/styles/main.scss src/styles/main.css --watch",
+    "sass:dev": "sass src/styles/main.scss src/styles/main.css --watch",
+    "sass:build": "sass src/styles/main.scss src/styles/main.css",
     "start": "serve src/views && yarn sass:start",
-    "deploy": "gh-pages -d dist",
-    "build": "gulp pages styles"
+    "prebuild": "rm -rf dist",
+    "build": "webpack && mkdir dist/assets && cp -rf src/assets dist && yarn sass:build && gulp pages styles",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "gh-pages": "^3.1.0",
@@ -17,7 +19,9 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^5.0.1",
-    "sass": "^1.30.0"
+    "sass": "^1.30.0",
+    "webpack": "^5.12.1",
+    "webpack-cli": "^4.3.1"
   },
   "dependencies": {
     "bootstrap": "^4.5.3"
