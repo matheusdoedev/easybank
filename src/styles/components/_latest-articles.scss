@@ -11,16 +11,19 @@
 }
 
 .latest-articles-card {
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+
   > img {
     border-radius: 5px 5px 0 0;
     -webkit-border-radius: 5px 5px 0 0;
     -moz-border-radius: 5px 5px 0 0;
     -ms-border-radius: 5px 5px 0 0;
     -o-border-radius: 5px 5px 0 0;
-
     width: 100%;
-    height: min-content;
-    image-resolution: initial;
   }
 
   > span,
@@ -42,6 +45,20 @@
   > span,
   > p {
     color: $grayish-blue;
+  }
+
+  &:hover {
+    > h4 {
+      color: $lime-green;
+      cursor: pointer;
+      transition: 0.3s;
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -ms-transition: 0.3s;
+      -o-transition: 0.3s;
+    }
+
+    cursor: pointer;
   }
 
   @include media-breakpoint-down(md) {

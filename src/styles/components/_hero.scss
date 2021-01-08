@@ -1,3 +1,9 @@
+.hero-container {
+  @include media-breakpoint-down(sm) {
+    width: 100vw;
+  }
+}
+
 .hero {
   position: relative;
   max-width: 100vw;
@@ -13,6 +19,18 @@
   @include media-breakpoint-down(sm) {
     height: auto;
     max-width: 100%;
+  }
+
+  &.menu-active {
+    background: linear-gradient(rgba(45, 49, 77, 0.7), rgba(0, 0, 0, 0));
+    // position: relative;
+    // z-index: 7;
+
+    .hero-imgs {
+      img {
+        display: none;
+      }
+    }
   }
 }
 
@@ -37,18 +55,18 @@
   }
 
   @include media-breakpoint-down(sm) {
-    padding: 0 0 var(--gap-xl) 0;
+    padding: 0 var(--gap) var(--gap-xl) var(--gap);
     height: auto;
-
+    margin-top: -24px;
     align-items: center;
     text-align: center;
+    width: 95vw;
   }
 }
 
 .hero-imgs {
   background: no-repeat url("../assets/images/bg-intro-desktop.svg") bottom left;
   height: 778.2px;
-
   position: absolute;
   right: 0;
   z-index: 2;
@@ -59,25 +77,33 @@
     z-index: 3;
 
     @include media-breakpoint-down(sm) {
-      top: -17.5vh;
-      right: 0;
-      left: 5%;
-      width: 90%;
+      width: 350px;
+      top: -10vh;
+      left: 50%;
+      margin-left: -175px;
     }
 
     @include media-breakpoint-only(md) {
       top: -5vh;
     }
 
+    @include media-breakpoint-only(lg) {
+      top: -8vh;
+    }
+
     @include media-breakpoint-only(xl) {
-      top: -16vh;
+      top: -9vh;
     }
 
     @media (min-width: 1550px) {
-      top: -14vh;
+      top: -10vh;
       right: -11vw;
       width: 80%;
     }
+  }
+
+  @include media-breakpoint-only(xs) {
+    height: 360px !important;
   }
 
   @include media-breakpoint-down(sm) {
@@ -85,7 +111,7 @@
     background: no-repeat url("../assets/images/bg-intro-mobile.svg") bottom
       left;
     background-size: cover;
-    height: 310px;
+    height: 410px;
   }
 
   @include media-breakpoint-only(md) {

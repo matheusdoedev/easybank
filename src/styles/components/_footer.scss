@@ -2,14 +2,18 @@
   background: $dark-blue;
   padding: var(--gap-md) 0;
 
-  @include media-breakpoint-down(sm) {
-    text-align: center;
-    padding: var(--gap-lg) 0;
+  .brand {
+    padding-left: 0;
 
-    .brand {
+    @include media-breakpoint-down(sm) {
       display: flex;
       justify-content: center;
     }
+  }
+
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+    padding: var(--gap-lg) 0;
   }
 }
 
@@ -23,19 +27,36 @@
   @include media-breakpoint-down(sm) {
     display: flex;
     justify-content: center;
-
     margin-bottom: var(--gap-md);
   }
 }
 
 .social-medias-item {
   > a {
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+
     > img {
       width: 25px;
       height: 25px;
-
       margin-right: var(--gap-xs);
     }
+  }
+
+  > a:hover {
+    > img {
+      filter: invert(0.4) sepia(1) saturate(13) hue-rotate(93.6deg)
+        brightness(0.93);
+    }
+
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
   }
 
   &:last-child {
@@ -52,6 +73,8 @@
     a {
       color: $very-light-gray;
     }
+
+    @include green-hover(a);
   }
 }
 
@@ -82,10 +105,11 @@
 
 .attribution {
   margin-top: var(--gap-sm);
-
   color: $grayish-blue;
 
-  a {
+  > a {
     color: $very-light-gray;
   }
+
+  @include green-hover(a);
 }
