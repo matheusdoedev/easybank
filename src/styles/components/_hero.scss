@@ -73,32 +73,31 @@
 
   > img {
     position: absolute;
-    right: -14.55vw;
     z-index: 3;
 
     @include media-breakpoint-down(sm) {
       width: 350px;
-      top: -10vh;
+      top: -125px;
       left: 50%;
       margin-left: -175px;
     }
 
     @include media-breakpoint-only(md) {
-      top: -5vh;
+      top: -85px;
+      width: 520px;
+      right: -120px;
     }
 
     @include media-breakpoint-only(lg) {
-      top: -8vh;
+      top: -105px;
+      width: 640px;
+      right: -160px;
     }
 
     @include media-breakpoint-only(xl) {
-      top: -9vh;
-    }
-
-    @media (min-width: 1550px) {
-      top: -10vh;
-      right: -11vw;
-      width: 80%;
+      top: -130px;
+      right: -190px;
+      width: 800px;
     }
   }
 
