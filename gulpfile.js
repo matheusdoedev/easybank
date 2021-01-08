@@ -6,7 +6,7 @@ var htmlmin = require("gulp-htmlmin");
 
 gulp.task("styles", () => {
   return gulp
-    .src("src/styles/main.css")
+    .src("src/styles/index.css")
     .pipe(autoprefixer())
     .pipe(cleanCSS())
     .pipe(gulp.dest("dist/styles"));
